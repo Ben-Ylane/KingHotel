@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation d'hôtel</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="../hotel code/photohotel/logo hotel.png" alt="logo" height="50" width="270">
+    </div>
+    <div class="header-image">
+        <img src="../hotel code/photohotel/phototell.png" alt="grande photo" height="690" width="1391">
+        <div class="text">Réservez les meilleurs hôtels de la région avec <br> King Hotel</div>
+    </div>
+    <br>
+    <br>
+
+    <div class="container">
+        <h1>Réservation d'hôtel</h1>
+        <form id="booking-form">
+            <label for="adults">Adultes:</label>
+            <button type="button" data-action="decrement" data-field="adults">-</button>
+            <input type="number" id="adults" name="adults" value="0" min="0">
+            <button type="button" data-action="increment" data-field="adults">+</button>
+            <div id="adults-error" class="error"></div>
+
+            <label for="children">Enfants:</label>
+            <button type="button" data-action="decrement" data-field="children">-</button>
+            <input type="number" id="children" name="children" value="0" min="0">
+            <button type="button" data-action="increment" data-field="children">+</button>
+            <div id="children-error" class="error"></div>
+            <div id="children-ages"></div> <!-- Affichage de l'âge des enfants -->
+
+            <label for="rooms">Chambres:</label>
+            <button type="button" data-action="decrement" data-field="rooms">-</button>
+            <input type="number" id="rooms" name="rooms" value="0" min="0">
+            <button type="button" data-action="increment" data-field="rooms">+</button>
+            <div id="rooms-error" class="error"></div>
+
+            <label for="start-date">Date de début:</label>
+            <input type="date" id="start-date" name="start-date">
+            <label for="end-date">Date de fin:</label>
+            <input type="date" id="end-date" name="end-date">
+            <div id="date-error" class="error"></div>
+
+            <button type="submit">Réserver</button>
+        </form>
+        <div id="summary"></div>
+    </div>
+    <script src="hotel.js"></script>
+    <br>
+    <br>
+    <div class="grispart"> 
+        <div class="footer"> 
+            <img src="../hotel code/photohotel/logo hotel.png" alt="logo" height="130" width="630"> 
+        </div>
+    </div>
+</body>
+</html>
